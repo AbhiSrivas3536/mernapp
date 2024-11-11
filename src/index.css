@@ -5,9 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'NHaasGrotesKDSPro-65Md' !important;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#carousel{
+  max-height: 500px;
+}
+
+/*The issue with "objectFit": "contain !important" not working in your React Bootstrap carousel likely occurs because inline styles cannot directly enforce CSS's !important rule. Additionally, Bootstrap's carousel layout or parent container might override the default image behavior.*/
+
+.carousel-img {
+  object-fit: contain;
+  width: 100%;
+  height: 800px; /* Adjust this height to fit your carousel container */
+}
+
